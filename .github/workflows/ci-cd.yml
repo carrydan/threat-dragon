@@ -48,11 +48,11 @@ jobs:
 
       # Шаг 7: Сборка Docker-образа
       - name: Build Docker image
-        run: docker build -t your_dockerhub_username/threat-dragon:${{ github.sha }} .
+        run: docker build -t carrydan/threat-dragon:${{ github.sha }} .
 
       # Шаг 8: Публикация Docker-образа
       - name: Push Docker image
-        run: docker push your_dockerhub_username/threat-dragon:${{ github.sha }}
+        run: docker push carrydan/threat-dragon:${{ github.sha }}
 
   deploy:
     if: github.ref == 'refs/heads/main'
